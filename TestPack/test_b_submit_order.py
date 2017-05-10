@@ -13,12 +13,13 @@ class SubmitOrder(LSTest):
     u"""模板商城提交订单集成数据库校验状态"""
     def test_submit_order(self):
         u"""模板商城提交订单集成数据库校验状态"""
-        url = config.Templates_URL
+        # url = config.Templates_URL
         # 模板商城
-        self.browser.get(url)
+        # self.browser.get(url)
         # url = config.LOGIN_URL
         # self.login_into_page(url)
 
+        sleep(5)
         # 个人场景
         personal_xpath = '//*[@id="category-top"]/div[1]/span'
         self.browser.find_element(By.XPATH, personal_xpath).click()
@@ -55,10 +56,10 @@ class SubmitOrder(LSTest):
         # 输入内容
         shuru1_xpath = '//*[@id="videoMake-main"]/div[1]/div[1]/div[2]/div[1]/div[3]/div/textarea'
         self.browser.find_element(By.XPATH, shuru1_xpath).clear()
-        self.browser.find_element(By.XPATH, shuru1_xpath).send_keys("test1")
-        shuru2_xpath = '//*[@id="videoMake-main"]/div[1]/div[1]/div[2]/div[2]/div[3]/div/textarea'
-        self.browser.find_element(By.XPATH, shuru2_xpath).clear()
-        self.browser.find_element(By.XPATH, shuru2_xpath).send_keys("test2")
+        self.browser.find_element(By.XPATH, shuru1_xpath).send_keys(u"自动化")
+        # shuru2_xpath = '//*[@id="videoMake-main"]/div[1]/div[1]/div[2]/div[2]/div[3]/div/textarea'
+        # self.browser.find_element(By.XPATH, shuru2_xpath).clear()
+        # self.browser.find_element(By.XPATH, shuru2_xpath).send_keys("test2")
 
         # 滑动
         js = "window.scrollTo(0,744);"

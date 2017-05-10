@@ -16,10 +16,10 @@ class PageNumber(LSTest):
         # url = config.Templates_URL
         # # 模板商城
         # self.browser.get(url)
-        url = config.LOGIN_URL
-        self.login_into_page(url)
+        # url = config.LOGIN_URL
+        # self.login_into_page(url)
 
-        sleep(2)
+        self.browser.refresh()
         # 个人场景
         personal_xpath = '//*[@id="category-top"]/div[1]/span'
         self.browser.find_element(By.XPATH, personal_xpath).click()

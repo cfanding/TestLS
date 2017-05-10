@@ -15,10 +15,10 @@ class ModifyPassword(LSTest):
         # url = config.Modify_URL
         # # 修改密码
         # self.browser.get(url)
-        url = config.LOGIN_URL
-        self.login_into_page(url)
+        # url = config.LOGIN_URL
+        # self.login_into_page(url)
 
-        sleep(2)
+        self.browser.refresh()
         # 个人中心
         personal_center_xpath = '/html/body/div/div[1]/div/ul[2]/div/span'
         self.browser.find_element(By.XPATH, personal_center_xpath).click()

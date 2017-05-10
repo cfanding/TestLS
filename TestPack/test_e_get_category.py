@@ -4,8 +4,8 @@ import unittest
 from selenium.webdriver.common.by import By
 from utils import LSTest
 from TestPack.models import function
+from time import sleep
 import MySQLdb
-import config
 
 
 class GetCategory(LSTest):
@@ -15,9 +15,10 @@ class GetCategory(LSTest):
         # url = config.Templates_URL
         # # 模板商城
         # self.browser.get(url)
-        url = config.LOGIN_URL
-        self.login_into_page(url)
+        # url = config.LOGIN_URL
+        # self.login_into_page(url)
 
+        sleep(5)
         # 个人场景
         personal_xpath = '//*[@id="category-top"]/div[1]/span'
         personal = self.browser.find_element(By.XPATH, personal_xpath).text

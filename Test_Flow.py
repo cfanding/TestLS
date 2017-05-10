@@ -22,12 +22,12 @@ def send_mail(file_new):
 
     try:
         smtp = smtplib.SMTP()
-        smtp.connect('smtp.11.com', '25')
-        smtp.login('cfanding@11.com', '**********')
+        smtp.connect('smtp.sohu.com', '25')
+        smtp.login('cfanding@sohu.com', 'number1234632176')
         print("login success!")
     except smtplib.SMTPAuthenticationError:
         print("Authenticion error!")
-    smtp.sendmail('cfanding@11.com', 'yading@11.com', msg.as_string())
+    smtp.sendmail('cfanding@sohu.com', 'yading@iflytek.com', msg.as_string())
     print ('email has send out !')
     smtp.quit()
 

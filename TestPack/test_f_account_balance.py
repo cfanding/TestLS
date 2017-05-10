@@ -12,8 +12,8 @@ class AccountBalance(LSTest):
     u"""账户余额校验"""
     def test_account_balance(self):
         u"""账户余额集成数据库校验"""
-        url = config.LOGIN_URL
-        self.login_into_page(url)
+        # url = config.LOGIN_URL
+        # self.login_into_page(url)
         sleep(2)
 
         # 账户余额展示

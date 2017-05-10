@@ -15,10 +15,11 @@ class MyAccount(LSTest):
         # url = config.MAccount_URL
         # # 我的账户
         # self.browser.get(url)
-        url = config.LOGIN_URL
-        self.login_into_page(url)
+        # url = config.LOGIN_URL
+        # self.login_into_page(url)
 
         sleep(5)
+        self.browser.refresh()
         # 个人中心
         personal_center_xpath = '/html/body/div/div[1]/div/ul[2]/div/span'
         self.browser.find_element(By.XPATH, personal_center_xpath).click()
